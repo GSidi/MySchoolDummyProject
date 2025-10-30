@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MySchoolApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MySchoolApplication.class, args);
+
 	}
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
