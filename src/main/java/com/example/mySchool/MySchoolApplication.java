@@ -10,12 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MySchoolApplication {
 	public static void main(String[] args) {
-
+		//localhost:8080 is the url
 		SpringApplication.run(MySchoolApplication.class, args);
 	}
 	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+	public String hello() {
 
-		return String.format("Hello %s!", name);
+		return String.format("Hello Kwstantina");
+	}
+	@GetMapping("/testGetRequest")
+	public String testPage() {
+
+		return String.format("Hello Gergios \n This is a test page for Kwstantina");
 	}
 }
